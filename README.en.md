@@ -1,4 +1,9 @@
 ## Seq2Seq Translation
+
+### README.md
+[中文](/README.md "link")<br>
+[English](/README.en.md "link")<br>
+
 ### Process Architecture
 ![modelflow](./images/modelflow.png)
 <br>
