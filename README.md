@@ -1,4 +1,9 @@
 ## Seq2Seq翻譯
+
+### README.md
+[中文](/README.md "link")<br>
+[English](/README.en.md "link")<br>
+
 ### 流程架構
 ![modelflow](./images/modelflow.png)
 <br>
@@ -21,7 +26,7 @@
 ![attention](./images/attention.png)圖片源自網路global attention
 <br>
 * Decoder內部有attention layer，負責找出要翻譯該時刻的目標語言，所需關注的是輸入語言的哪個部分。
-* 使src相關的hidden state和prev的hidden state(可能經過embed或nueral網路)產生聯繫，方法如矩陣相乘、串街後交由神經網路處理等。
+* 使與src相關的hidden state(來自Encoder)和prev的hidden state(可能經過embed或神經網路)這兩者產生聯繫，方法如矩陣相乘、兩者串聯後交由神經網路處理等。
 * 此聯繫結果會產生一組分數，能透過分數高低來表示是否關注於src某位置的token，並將此分數作為權重與encoder傳來的hidden state相乘，透過此種方法來影響模型翻譯的結果。
 <br>
 翻譯及attention如下圖，能觀察到將英文翻成中文時，每個token的翻譯會注重在英文句子的何處:<br>
